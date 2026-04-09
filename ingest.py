@@ -132,7 +132,7 @@ def build_vectorstore(documents: list[dict]) -> chromadb.Collection:
 
     try:
         client.delete_collection("rba_minutes")
-    except ValueError:
+    except (ValueError, Exception):
         pass
 
     collection = client.get_or_create_collection(

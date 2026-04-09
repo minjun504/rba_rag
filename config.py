@@ -11,10 +11,10 @@ DATA_DIR = PROJECT_ROOT / "data"
 CHROMA_DIR = PROJECT_ROOT / "vectorstore"
 
 # Embedding model (runs locally via sentence-transformers)
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+EMBEDDING_MODEL = "all-mpnet-base-v2"
 
 # Chunking parameters
-CHUNK_SIZE = 512  # tokens (approx)
+CHUNK_SIZE = 256  # tokens (approx)
 CHUNK_OVERLAP = 64
 
 # Retrieval
@@ -26,14 +26,14 @@ OLLAMA_MODEL = "mistral"  # or "llama3", "phi3", etc.
 
 # RBA document URLs (monetary policy decisions, 2024-2025)
 RBA_URLS = [
-    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2025/2025-02-17.html",
-    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2025/2025-03-31.html",
-    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2024/2024-12-09.html",
-    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2024/2024-11-04.html",
-    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2024/2024-09-23.html",
-    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2024/2024-08-05.html",
-    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2024/2024-06-17.html",
-    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2024/2024-05-06.html",
-    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2024/2024-03-18.html",
-    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2024/2024-02-05.html",
+    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2025/2025-02-18.html",
+    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2025/2025-04-01.html",
+    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2025/2025-05-20.html",
+    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2025/2025-07-08.html",
+    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2025/2025-08-12.html",
+    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2025/2025-09-30.html",
+    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2025/2025-11-04.html",
+    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2025/2025-12-09.html",
+    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2026/2026-02-03.html",
+    "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2026/2026-03-17.html",
 ]

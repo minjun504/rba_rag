@@ -30,38 +30,35 @@ from retrieve import retrieve
 EVAL_SET = [
     {
         "query": "What did the RBA decide about the cash rate in February 2025?",
-        "expected_sources": ["2025-02-17.html"],
+        "expected_sources": ["2025-02-18.html"],
     },
     {
-        "query": "What was the RBA's assessment of inflation in late 2024?",
-        "expected_sources": ["2024-12-09.html", "2024-11-04.html"],
+        "query": "What was the RBA's assessment of inflation in late 2025?",
+        "expected_sources": ["2025-11-04.html", "2025-12-09.html"],
     },
     {
-        "query": "How did the RBA view the labour market in mid 2024?",
-        "expected_sources": ["2024-06-17.html", "2024-08-05.html"],
+        "query": "How did the RBA view the labour market in mid 2025?",
+        "expected_sources": ["2025-07-08.html", "2025-08-12.html"],
     },
     {
-        "query": "What risks to the economic outlook did the Board discuss in March 2024?",
-        "expected_sources": ["2024-03-18.html"],
+        "query": "What risks to the economic outlook did the Board discuss in April 2025?",
+        "expected_sources": ["2025-04-01.html"],
     },
     {
         "query": "What was the Board's view on household consumption and spending?",
-        "expected_sources": ["2024-05-06.html", "2024-06-17.html", "2024-08-05.html"],
+        "expected_sources": ["2025-05-20.html", "2025-07-08.html", "2025-08-12.html"],
     },
     {
-        "query": "How did global economic conditions affect the RBA's decision in September 2024?",
-        "expected_sources": ["2024-09-23.html"],
+        "query": "How did global economic conditions affect the RBA's decisions in September 2025?",
+        "expected_sources": ["2025-09-30.html"],
     },
     {
-        "query": "What did the RBA say about housing prices and supply in 2024?",
-        "expected_sources": [
-            "2024-02-05.html", "2024-03-18.html", "2024-05-06.html",
-            "2024-08-05.html", "2024-11-04.html",
-        ],
+        "query": "What did the RBA say about housing prices and supply in 2025?",
+        "expected_sources": ["2025-02-18.html", "2025-05-20.html", "2025-08-12.html", "2025-11-04.html"],
     },
     {
-        "query": "What was discussed about wages growth in early 2024?",
-        "expected_sources": ["2024-02-05.html", "2024-03-18.html"],
+        "query": "What was discussed about wages growth in early 2025?",
+        "expected_sources": ["2025-02-18.html", "2025-04-01.html"],
     },
 ]
 
@@ -136,7 +133,7 @@ def main():
     print(f"{'='*50}")
 
     # Save results
-    output_path = Path(__file__).parent.parent / "eval_results.json"
+    output_path = Path(__file__).parent / "eval_results.json"
     with open(output_path, "w") as f:
         json.dump(metrics, f, indent=2)
     print(f"\n  Results saved to {output_path}")
