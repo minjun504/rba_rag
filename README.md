@@ -18,7 +18,7 @@ A retrieval-augmented generation (RAG) system for querying Reserve Bank of Austr
 ```
 
 **Components:**
-- **Ingestion** (`src/ingest.py`): Downloads RBA board minutes (HTML), extracts text, splits into overlapping chunks, embeds with `all-MiniLM-L6-v2`, and stores in ChromaDB.
+- **Ingestion** (`src/ingest.py`): Downloads RBA board minutes (HTML), extracts text, splits into overlapping chunks, embeds with `all-mpnet-base-v2`, and stores in ChromaDB.
 - **Retrieval** (`src/retrieve.py`): Encodes a user query, performs cosine similarity search against the vector store, and returns the top-K most relevant chunks with scores.
 - **Generation** (`src/generate.py`): Passes retrieved context to a local LLM (via Ollama) with a grounded system prompt that enforces source attribution. Falls back gracefully to retrieval-only mode if no LLM is available.
 - **Evaluation** (`src/evaluate.py`): Measures retrieval quality using Mean Reciprocal Rank (MRR), Hit Rate @ K, and mean cosine similarity against a hand-curated ground truth set.
@@ -65,7 +65,7 @@ python src/evaluate.py --top-k 5
 
 ## Tech Stack
 
-- **Embeddings**: `sentence-transformers` (all-MiniLM-L6-v2)
+- **Embeddings**: `sentence-transformers` (all-mpnet-base-v2)
 - **Vector Store**: ChromaDB (persistent, local)
 - **LLM**: Ollama (optional, local — Mistral/Llama 3)
 - **Language**: Python 3.10+
